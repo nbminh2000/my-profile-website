@@ -13,7 +13,7 @@ export default function DescriptionTab() {
       : description;
 
   return (
-    <>
+    <div className={styles.content}>
       <h2>About Me</h2>
       <p className={styles.description}>
         {expanded ? description : shortText}
@@ -27,6 +27,6 @@ export default function DescriptionTab() {
           {expanded ? "Less" : "More..."}
         </span>
       )}
-    </>
+    </div>
   );
 }

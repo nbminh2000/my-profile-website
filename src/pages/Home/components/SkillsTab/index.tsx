@@ -3,7 +3,7 @@ import { skillsData } from "../../data";
 
 export default function SkillsTab() {
   return (
-    <>
+    <div className={styles.content}>
       <h2>Tecnical Skills</h2>
       <div className={styles.skillsWrapper}>
       {skillsData.map((skill, index) => (
@@ -23,6 +23,6 @@ export default function SkillsTab() {
         <li>Agile / Scrum Methodology</li>
         <li>System Migration & Legacy Upgrade</li>
       </ul>
-    </>
+    </div>
   );
 }

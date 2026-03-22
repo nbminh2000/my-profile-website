@@ -6,3 +6,9 @@ html {
   border: 0;
   font-size: 62.5%;
 }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 56.25%; /* Slightly smaller base font size on mobile */
+  }
+}

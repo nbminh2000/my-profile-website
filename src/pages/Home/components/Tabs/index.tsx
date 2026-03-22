@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { TabType } from "../../data";
 import styles from "./Tabs.module.scss";
 
@@ -7,9 +7,34 @@ type TabsProps = {
   setActiveTab: (tab: TabType) => void;
 };
 
+const tabIcons = {
+  description: "👤",
+  skills: "🛠️",
+  experience: "💼",
+  contact: "📞",
+};
+
+const tabLabels = {
+  description: "Description",
+  skills: "Skills",
+  experience: "Experience",
+  contact: "Contact",
+};
+
 export default function Tabs({ activeTab, setActiveTab }: TabsProps) {
+  const [isMobile, setIsMobile] = useState(false);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const indicatorRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     const activeIndex = [
@@ -51,8 +76,13 @@ export default function Tabs({ activeTab, setActiveTab }: TabsProps) {
               activeTab === tab ? styles.active : ""
             }`}
             onClick={() => setActiveTab(tab as TabType)}
+            title={tabLabels[tab as TabType]} // tooltip cho mobile
           >
-            {tab.charAt(0).toUpperCase() + tab.slice(1)}
+            {isMobile ? (
+              <span className={styles.icon}>{tabIcons[tab as TabType]}</span>
+            ) : (
+              tabLabels[tab as TabType]
+            )}
           </button>
         ),
       )}

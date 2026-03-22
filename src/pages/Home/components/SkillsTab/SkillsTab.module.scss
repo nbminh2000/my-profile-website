@@ -1,7 +1,24 @@
+.content {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 16px;
+  }
+}
+
 .skillsWrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .skillsWrapper {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+  }
 }
 
 .skillGroup {

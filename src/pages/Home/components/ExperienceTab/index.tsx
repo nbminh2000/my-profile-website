@@ -30,7 +30,7 @@ export default function ExperienceTab() {
   : [];
 
   return (
-    <>
+    <div className={styles.content}>
       <h2>Experience</h2>
 
       <div className={styles.timelineWrapper}>
@@ -94,6 +94,6 @@ export default function ExperienceTab() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }

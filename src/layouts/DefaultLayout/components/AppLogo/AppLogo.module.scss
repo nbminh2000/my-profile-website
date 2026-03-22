@@ -18,3 +18,14 @@
   margin-left: 16px;        
   color: #000;     /* tránh margin làm lệch layout */
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.2rem;
+    margin-left: 8px;
+  }
+  
+  .logo {
+    width: 32px;
+  }
+}

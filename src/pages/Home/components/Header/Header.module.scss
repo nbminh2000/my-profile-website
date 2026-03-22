@@ -7,9 +7,21 @@
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .header {
+    padding: 40px 16px;
+  }
+}
+
 .headerContent {
   position: relative;
   height: 180px; // giữ chiều cao ổn định
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    height: 140px;
+  }
 }
 
 /* Default content */
@@ -49,6 +61,24 @@
   }
 }
 
+@media (max-width: 768px) {
+  .mainContent {
+    img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+}
+
 /* Hover content */
 .hoverContent {
   position: absolute;
@@ -70,6 +100,15 @@
   p {
     font-size: 16px;
     margin: 5px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hoverContent {
+    p {
+      font-size: 14px;
+      margin: 3px 0;
+    }
   }
 }
 

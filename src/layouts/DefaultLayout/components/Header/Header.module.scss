@@ -13,6 +13,15 @@
   background-color: #fff;
   font-size: 1.4rem;
 }
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 16px;
+    gap: 16px;
+    height: 56px;
+  }
+}
+
 .actions {
   display: flex;
   align-items: center;

@@ -20,6 +20,14 @@
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .searchInput {
+    width: 200px;
+    height: 36px;
+    padding: 0 12px 0 6px;
+  }
+}
+
 .searchIcon {
   width: 30px;
   height: 32px;
