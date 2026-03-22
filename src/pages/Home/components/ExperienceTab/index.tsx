@@ -25,7 +25,9 @@ export default function ExperienceTab() {
 
   // 👉 support multiple experiences per year
   const current = experienceData[activeIndex];
-  const experienceList = current.items;
+  const experienceList = Array.isArray(current.items)
+  ? current.items
+  : [];
 
   return (
     <>

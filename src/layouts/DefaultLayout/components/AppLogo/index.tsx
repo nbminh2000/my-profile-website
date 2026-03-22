@@ -6,8 +6,8 @@ export default function AppLogo() {
       <a href="/">
         <img
           className={styles.logo}
-          src="/assets/images/nbm-logo.png"
-          alt="F8 logo"
+          src="src/assets/images/nbm-logo.png"
+          alt="NBM logo"
         />
       </a>
       <a>
