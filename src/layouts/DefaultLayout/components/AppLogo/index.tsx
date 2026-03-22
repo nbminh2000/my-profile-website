@@ -1,4 +1,5 @@
 import styles from "./AppLogo.module.scss";
+import logo from "@/assets/images/nbm-logo.png";
 
 export default function AppLogo() {
   return (
@@ -6,7 +7,7 @@ export default function AppLogo() {
       <a href="/">
         <img
           className={styles.logo}
-          src="/assets/images/nbm-logo.png"
+          src={logo}
           alt="NBM logo"
         />
       </a>

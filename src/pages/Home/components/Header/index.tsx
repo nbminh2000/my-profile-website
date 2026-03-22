@@ -1,12 +1,13 @@
 import { contactData } from "../../data";
 import styles from "./Header.module.scss";
+import avt from "@/assets/images/avt.jpg";
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.headerContent}>
         <div className={styles.mainContent}>
-          <img src="/assets/images/avt.jpg" alt="Avatar" />
+          <img src={avt} alt="Avatar" />
           <h1>Nguyễn Bình Minh</h1>
           <p>Java Developer | IT Engineer</p>
         </div>
