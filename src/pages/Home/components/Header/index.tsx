@@ -6,7 +6,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.headerContent}>
         <div className={styles.mainContent}>
-          <img src="src/assets/images/avt.jpg" alt="Avatar" />
+          <img src="/assets/images/avt.jpg" alt="Avatar" />
           <h1>Nguyễn Bình Minh</h1>
           <p>Java Developer | IT Engineer</p>
         </div>
