@@ -1,0 +1,12 @@
+.notification {
+    padding: 8px;
+    position: relative;
+    user-select: none;
+    color: rgb(112, 112, 112);
+  transition: color 0.2s ease;
+}
+
+.notification:hover {
+    cursor: pointer;
+    color: #000;
+}

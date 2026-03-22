@@ -1,0 +1,86 @@
+.header {
+  background: linear-gradient(135deg, #ff6e25, #e46885);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.headerContent {
+  position: relative;
+  height: 180px; // giữ chiều cao ổn định
+}
+
+/* Default content */
+.mainContent {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: 
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s ease;
+
+  opacity: 1;
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 14px;
+    opacity: 0.9;
+  }
+}
+
+/* Hover content */
+.hoverContent {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 100%; // bắt đầu ở bên phải
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: 
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s ease;
+
+  opacity: 0;
+
+  p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+}
+
+.header:hover .mainContent {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.header:hover .hoverContent {
+  transform: translateX(-100%);
+  opacity: 1;
+  transition-delay: 0.15s;
+}

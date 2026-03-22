@@ -1,0 +1,22 @@
+.description {
+  line-height: 1.6;
+}
+
+.more {
+  display: inline-block;
+  margin-top: 8px;
+  color: #ff6e25;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  &:hover {
+    color: #e85c1c; 
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}

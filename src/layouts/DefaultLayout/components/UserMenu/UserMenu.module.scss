@@ -1,0 +1,30 @@
+.navbarAvatar {
+    margin-left: 12px;
+}
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(.5em * var(--border-scale, 1));
+    position: relative;
+    background: conic-gradient(rgb(234, 67, 53), rgb(234, 67, 53) 90deg, rgb(66, 133, 244) 90deg, rgb(66, 133, 244) 180deg, rgb(52, 168, 83) 180deg, rgb(52, 168, 83) 270deg, rgb(251, 188, 4) 270deg, rgb(251, 188, 4) 360deg);
+    rotate: -45deg;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 3.2px;
+}
+ 
+.avatarImage { 
+    padding: calc(.4em * var(--border-scale, 1));
+    box-sizing: border-box;
+    rotate: 45deg;
+}
+
+.avatarImage {
+    width: 9em;
+    height: 9em;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #fff;
+    display: block;
+}

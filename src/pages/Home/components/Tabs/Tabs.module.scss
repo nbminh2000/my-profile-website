@@ -1,0 +1,69 @@
+.tabs {
+  position: relative;
+  display: flex;
+  width: 100%;              // full width
+  // background: #fff;         // nền trắng
+  border-radius: 12px;
+  padding: 6px;
+  gap: 6px;
+
+  border: 1px solid #eee;   // viền nhẹ
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); // nổi nhẹ
+}
+
+/* Indicator (cái "lava") */
+.indicator {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  height: calc(100% - 12px);
+
+  background: #ff6e25;
+  border-radius: 8px;
+  z-index: 0;
+
+  transition: 
+    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.35s ease;
+}
+
+/* Tab */
+.tab {
+  flex: 1;                  // 🔥 QUAN TRỌNG: auto giãn đều
+  text-align: center;
+
+  position: relative;
+  z-index: 1;
+
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+
+  color: #666;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: #ff6e25;
+  }
+}
+
+/* Active text */
+.active {
+  color: white;
+}
+
+.active:hover {
+  color: white; // giữ màu trắng khi hover
+}
+
+.tab:hover {
+  background: rgba(255, 110, 37, 0.08);
+}
+
+.tab:active {
+  transform: scale(0.97);
+}
